@@ -13,7 +13,7 @@ const signup = async (req, res) => {
 const login = async (req, res) => {
   try {
     const auth = await services.login(req.body);
-    res.headers.token = auth;
+    res.header('token', auth);
     res.json({
       auth,
     }).status(200);
