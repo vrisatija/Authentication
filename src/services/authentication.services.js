@@ -1,4 +1,4 @@
-const { default: Redis } = require('ioredis');
+// const { default: Redis } = require('ioredis');
 const utils = require('../utils/token.utils');
 const redis = require('../utils/redis.utils');
 const models = require('../../models');
