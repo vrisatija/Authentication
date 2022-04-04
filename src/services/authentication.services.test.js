@@ -22,7 +22,7 @@ describe('login function', () => {
       expect(err.code).toEqual(401);
     }
   });
-  it('should throw an error with status code 401 if details are not in login database', async () => {
+  it('should throw an error with status code 400 if details are not in login database', async () => {
     try {
       jest.spyOn(models.authentications, 'findAll').mockResolvedValue([]);
       await login({ loginDetails: 'hi' });
